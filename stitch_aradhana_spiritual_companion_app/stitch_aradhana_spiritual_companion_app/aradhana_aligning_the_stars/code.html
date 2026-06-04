@@ -1,0 +1,121 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Aradhana - Loading</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;family=Playfair+Display:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#e5e2e2",
+                        "on-secondary-container": "#342800",
+                        "on-tertiary": "#462a00",
+                        "on-tertiary-container": "#ac6f00",
+                        "surface-bright": "#3a393a",
+                        "surface-container-high": "#2a2a2b",
+                        "on-primary-container": "#787b8a",
+                        "error-container": "#93000a",
+                        "on-background": "#e5e2e2",
+                        "tertiary-fixed-dim": "#ffb95a",
+                        "on-secondary": "#3c2f00",
+                        "on-secondary-fixed": "#241a00",
+                        "on-error": "#690005",
+                        "surface-container": "#201f20",
+                        "surface-container-low": "#1c1b1c",
+                        "surface-variant": "#353435",
+                        "surface-container-highest": "#353435",
+                        "tertiary": "#ffb95a",
+                        "inverse-primary": "#5a5e6c",
+                        "tertiary-fixed": "#ffddb6",
+                        "on-surface-variant": "#c7c6cc",
+                        "on-tertiary-fixed": "#2a1800",
+                        "surface": "#131314",
+                        "secondary-fixed-dim": "#e9c349",
+                        "surface-tint": "#c3c6d6",
+                        "tertiary-container": "#1a0d00",
+                        "surface-container-lowest": "#0e0e0f",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#e9c349",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#574500",
+                        "background": "#131314",
+                        "primary-fixed": "#dfe2f2",
+                        "on-tertiary-fixed-variant": "#643f00",
+                        "outline-variant": "#46464c",
+                        "primary-container": "#0b0f1a",
+                        "primary-fixed-dim": "#c3c6d6",
+                        "on-primary": "#2c303c",
+                        "primary": "#c3c6d6",
+                        "on-primary-fixed": "#171b27",
+                        "secondary-container": "#af8d11",
+                        "outline": "#909096",
+                        "secondary-fixed": "#ffe088",
+                        "on-surface": "#e5e2e2",
+                        "inverse-on-surface": "#313031",
+                        "surface-dim": "#131314",
+                        "on-primary-fixed-variant": "#434653"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "48px",
+                        "unit": "8px",
+                        "container-padding": "24px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "300" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>@keyframes spin-very-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } } .animate-spin-very-slow { animation: spin-very-slow 40s linear infinite; } @keyframes intense-glow { 0%, 100% { opacity: 0.15; transform: scale(1.1); } 50% { opacity: 0.25; transform: scale(1.3); } } .animate-intense-glow { animation: intense-glow 5s ease-in-out infinite; }</style>
+<style>@keyframes spin-very-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } } .animate-spin-very-slow { animation: spin-very-slow 40s linear infinite; } @keyframes intense-glow { 0%, 100% { opacity: 0.15; transform: scale(1.1); } 50% { opacity: 0.25; transform: scale(1.3); } } .animate-intense-glow { animation: intense-glow 5s ease-in-out infinite; }</style></head>
+<body class="bg-background text-on-background min-h-screen flex flex-col items-center justify-center overflow-hidden relative selection:bg-secondary/30">
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full bg-secondary blur-[120px] opacity-20 animate-intense-glow" style="filter: blur(140px); transform: scale(1.2);"></div>
+</div>
+<main class="relative z-10 flex flex-col items-center justify-center space-y-section-gap px-container-padding w-full max-w-md mx-auto">
+<div class="relative w-56 h-56 md:w-72 md:h-72 flex items-center justify-center">
+<div class="absolute inset-0 rounded-full shadow-[0_0_60px_rgba(233,195,73,0.15)] pointer-events-none"></div>
+<img alt="Celestial loading wheel" class="w-full h-full object-cover rounded-full animate-spin-very-slow opacity-90 mix-blend-screen grayscale contrast-200 sepia-[.5] hue-rotate-[-30deg] drop-shadow-[0_0_35px_rgba(233,195,73,0.6)]" data-alt="A highly intricate, glowing golden geometric mandala representing a mystical zodiac wheel. It floats against a pitch-black background, evoking a sense of deep space and sacred minimalism. The lines are delicate and precise, softly illuminated as if by starlight, casting a subtle ethereal halo. The overall aesthetic is tranquil, premium, and spiritually advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF0OtnDhqHdPypuYnd2CfZRfxcKcuwGkjRz5uT80XIcDT3d7HhU9U-n3GhMgAgzKbVodAqzeOCmOt365fh09cKnMMF_liYEEJBRhQyI2rAED5zIDOgREgQ6vXosLSPs4cVRSrLe4Ur_i0fVeXgo9PSUscfLya3z5lspR2znYPa_bbCoeePEUf0NzqaAIauXxeZCrlJLIc801R4WIXB6AoY5Qb3LyPXSeYhQVMZWkqeUbGV1Sf5DqU0u3tkflo3MzalyU7DgXB96-HH">
+</div>
+<div class="text-center space-y-unit flex flex-col items-center">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-secondary tracking-wide drop-shadow-[0_0_15px_rgba(233,195,73,0.6)] brightness-125">
+                The stars are aligning...
+            </h1>
+<p class="font-body-md text-body-md text-on-surface-variant/60 max-w-[280px]">
+                Seeking clarity in the cosmos and preparing your sacred space.
+            </p>
+</div>
+</main>
+
+
+</body></html>

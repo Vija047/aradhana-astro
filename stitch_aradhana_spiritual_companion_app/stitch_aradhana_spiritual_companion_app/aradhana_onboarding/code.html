@@ -1,0 +1,294 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Aradhana - Birth Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;family=Playfair+Display:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#e5e2e2",
+                    "on-secondary-container": "#342800",
+                    "on-tertiary": "#462a00",
+                    "on-tertiary-container": "#ac6f00",
+                    "surface-bright": "#3a393a",
+                    "surface-container-high": "#2a2a2b",
+                    "on-primary-container": "#787b8a",
+                    "error-container": "#93000a",
+                    "on-background": "#e5e2e2",
+                    "tertiary-fixed-dim": "#ffb95a",
+                    "on-secondary": "#3c2f00",
+                    "on-secondary-fixed": "#241a00",
+                    "on-error": "#690005",
+                    "surface-container": "#201f20",
+                    "surface-container-low": "#1c1b1c",
+                    "surface-variant": "#353435",
+                    "surface-container-highest": "#353435",
+                    "tertiary": "#ffb95a",
+                    "inverse-primary": "#5a5e6c",
+                    "tertiary-fixed": "#ffddb6",
+                    "on-surface-variant": "#c7c6cc",
+                    "on-tertiary-fixed": "#2a1800",
+                    "surface": "#131314",
+                    "secondary-fixed-dim": "#e9c349",
+                    "surface-tint": "#c3c6d6",
+                    "tertiary-container": "#1a0d00",
+                    "surface-container-lowest": "#0e0e0f",
+                    "on-error-container": "#ffdad6",
+                    "secondary": "#e9c349",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed-variant": "#574500",
+                    "background": "#131314",
+                    "primary-fixed": "#dfe2f2",
+                    "on-tertiary-fixed-variant": "#643f00",
+                    "outline-variant": "#46464c",
+                    "primary-container": "#0b0f1a",
+                    "primary-fixed-dim": "#c3c6d6",
+                    "on-primary": "#2c303c",
+                    "primary": "#c3c6d6",
+                    "on-primary-fixed": "#171b27",
+                    "secondary-container": "#af8d11",
+                    "outline": "#909096",
+                    "secondary-fixed": "#ffe088",
+                    "on-surface": "#e5e2e2",
+                    "inverse-on-surface": "#313031",
+                    "surface-dim": "#131314",
+                    "on-primary-fixed-variant": "#434653"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "48px",
+                    "unit": "8px",
+                    "container-padding": "24px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Playfair Display"],
+                    "label-sm": ["Inter"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "300"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .glass-panel {
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .glow-active {
+            box-shadow: 0 0 50px rgba(233, 195, 73, 0.25);
+        }
+
+        .bg-starfield {
+            background-image: 
+                radial-gradient(1px 1px at 10% 20%, white 100%, transparent),
+                radial-gradient(1px 1px at 30% 50%, white 100%, transparent),
+                radial-gradient(1.5px 1.5px at 60% 80%, white 100%, transparent),
+                radial-gradient(1px 1px at 80% 10%, white 100%, transparent),
+                radial-gradient(2px 2px at 90% 90%, white 100%, transparent);
+            background-size: 200px 200px;
+            opacity: 0.15;
+        }
+
+        .input-ghost {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 0;
+            padding-left: 0;
+            padding-right: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .input-ghost:focus {
+            box-shadow: 0 4px 15px -4px rgba(233, 195, 73, 0.5);
+            border-bottom-color: #e9c349;
+            outline: none;
+        }
+        
+        /* Time Toggle Custom Switch */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #e9c349;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: rgba(233, 195, 73, 0.2);
+            box-shadow: 0 0 15px rgba(233, 195, 73, 0.3);
+        }
+        .toggle-checkbox:checked + .toggle-label:after {
+            transform: translateX(100%);
+            background-color: #e9c349;
+        }
+    </style>
+<style>
+        .glass-panel {
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .glow-active {
+            box-shadow: 0 0 50px rgba(233, 195, 73, 0.25);
+        }
+
+        .bg-starfield {
+            background-image: 
+                radial-gradient(1px 1px at 10% 20%, white 100%, transparent),
+                radial-gradient(1px 1px at 30% 50%, white 100%, transparent),
+                radial-gradient(1.5px 1.5px at 60% 80%, white 100%, transparent),
+                radial-gradient(1px 1px at 80% 10%, white 100%, transparent),
+                radial-gradient(2px 2px at 90% 90%, white 100%, transparent);
+            background-size: 200px 200px;
+            opacity: 0.15;
+        }
+
+        .input-ghost {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 0;
+            padding-left: 0;
+            padding-right: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .input-ghost:focus {
+            box-shadow: 0 4px 15px -4px rgba(233, 195, 73, 0.5);
+            border-bottom-color: #e9c349;
+            outline: none;
+        }
+        
+        /* Time Toggle Custom Switch */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #e9c349;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: rgba(233, 195, 73, 0.2);
+            box-shadow: 0 0 15px rgba(233, 195, 73, 0.3);
+        }
+        .toggle-checkbox:checked + .toggle-label:after {
+            transform: translateX(100%);
+            background-color: #e9c349;
+        }
+    </style></head>
+<body class="bg-background text-on-background min-h-screen flex items-center justify-center relative overflow-hidden font-body-md text-body-md">
+<!-- Starfield Background -->
+<div class="absolute inset-0 bg-starfield pointer-events-none z-0"></div>
+<!-- Subtle Zodiac Wheel Background Graphic -->
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none z-0 mix-blend-screen" data-alt="A delicate, minimalist, very faint golden zodiac wheel illustration glowing softly against a dark midnight navy background. The lines are thin and elegant, capturing the celestial and spiritual mood of sacred minimalism without distracting from the foreground UI. The lighting is soft and ethereal.">
+<div class="w-[800px] h-[800px] rounded-full border border-white/20 animate-[spin_120s_linear_infinite]"></div>
+<div class="absolute w-[600px] h-[600px] rounded-full border border-white/10 border-dashed animate-[spin_90s_linear_infinite_reverse]"></div>
+</div>
+<!-- Main Content Canvas -->
+<main class="relative z-10 w-full max-w-lg px-container-padding py-section-gap flex flex-col items-center">
+<!-- Glassmorphism Card -->
+<div class="glass-panel w-full rounded-xl p-8 md:p-12 glow-active flex flex-col gap-8 relative overflow-hidden">
+<!-- Soft inner top glow -->
+<div class="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-secondary/10 to-transparent pointer-events-none"></div>
+<!-- Header -->
+<div class="text-center space-y-4">
+<h1 class="font-display-lg text-display-lg text-primary md:font-display-lg md:text-display-lg drop-shadow-[0_0_12px_rgba(233,195,73,0.3)]">
+                    Tell me when you arrived
+                </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Your natal chart is the precise map of the cosmos at your exact moment of birth.
+                </p>
+</div>
+<!-- Form -->
+<form class="flex flex-col gap-6 w-full mt-4" onsubmit="event.preventDefault(); window.location.href='#';">
+<!-- Full Name -->
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-secondary mb-2 uppercase tracking-widest" for="fullName">Full Name</label>
+<input class="input-ghost font-body-lg text-body-lg text-on-surface placeholder:text-on-surface-variant/50 w-full py-2" id="fullName" placeholder="How should we address you?" type="text">
+</div>
+<!-- Date of Birth -->
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-secondary mb-2 uppercase tracking-widest" for="dob">Date of Birth</label>
+<input class="input-ghost font-body-lg text-body-lg text-on-surface w-full py-2 [color-scheme:dark]" id="dob" type="date">
+</div>
+<!-- Time of Birth & Toggle -->
+<div class="flex flex-col gap-4">
+<div class="flex flex-col" id="timeInputContainer">
+<label class="font-label-sm text-label-sm text-secondary mb-2 uppercase tracking-widest" for="tob">Time of Birth</label>
+<input class="input-ghost font-body-lg text-body-lg text-on-surface w-full py-2 [color-scheme:dark]" id="tob" type="time">
+</div>
+<!-- Toggle Switch -->
+<div class="flex items-center justify-between mt-2">
+<span class="font-body-md text-body-md text-on-surface-variant">I don't know my exact time</span>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-transparent appearance-none cursor-pointer z-10 opacity-0" id="timeToggle" name="toggle" type="checkbox">
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-variant cursor-pointer border border-white/10 relative" for="timeToggle">
+<span class="absolute block w-5 h-5 bg-outline rounded-full top-[1px] left-[1px] transition-transform duration-300"></span>
+</label>
+</div>
+</div>
+</div>
+<!-- Place of Birth -->
+<div class="flex flex-col mt-2">
+<label class="font-label-sm text-label-sm text-secondary mb-2 uppercase tracking-widest" for="pob">Place of Birth</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-0 top-1/2 -translate-y-1/2 text-on-surface-variant">location_on</span>
+<input class="input-ghost font-body-lg text-body-lg text-on-surface placeholder:text-on-surface-variant/50 w-full py-2 pl-8" id="pob" placeholder="City, State, Country" type="text">
+</div>
+</div>
+<!-- Spacer -->
+<div class="h-4"></div>
+<!-- CTA Button -->
+<button class="w-full bg-gradient-to-r from-secondary to-tertiary text-on-secondary-container font-label-sm text-label-sm py-4 rounded-full uppercase tracking-widest hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-[0_0_35px_rgba(233,195,73,0.5)] border border-secondary/20" type="submit">
+                    Begin My Reading
+                    <span class="material-symbols-outlined text-[18px] drop-shadow-[0_0_5px_rgba(0,0,0,0.2)]">arrow_forward</span>
+</button>
+<!-- Disclaimer -->
+<p class="font-label-sm text-label-sm text-center text-on-surface-variant/60 mt-4 normal-case tracking-normal">
+                    Your details are used only to compute your birth chart.
+                </p>
+</form>
+</div>
+</main>
+<script>
+        // Simple script to handle the "I don't know my exact time" toggle
+        document.getElementById('timeToggle').addEventListener('change', function() {
+            const timeContainer = document.getElementById('timeInputContainer');
+            const timeInput = document.getElementById('tob');
+            if (this.checked) {
+                timeContainer.style.opacity = '0.3';
+                timeInput.disabled = true;
+                timeInput.value = '12:00'; // Default to noon for unknown times
+            } else {
+                timeContainer.style.opacity = '1';
+                timeInput.disabled = false;
+            }
+        });
+    </script>
+
+
+</body></html>

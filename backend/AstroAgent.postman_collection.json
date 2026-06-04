@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "8f86f7df-8db1-4c6c-9c71-92b43b44b82d",
+		"name": "AstroAgent API",
+		"description": "Postman Collection for testing the AstroAgent backend streaming and health endpoints.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:{{PORT}}/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"health"
+					]
+				},
+				"description": "Checks the operational status of the AstroAgent Express application and database connectivity states."
+			},
+			"response": []
+		},
+		{
+			"name": "Stream Chat",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"message\": \"I was born on 1990-06-15 at 08:30 in London. Can you compute my birth chart?\",\n  \"sessionId\": \"test_session_123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:{{PORT}}/api/chat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"chat"
+					]
+				},
+				"description": "Initiates a Server-Sent Events (SSE) stream returning token-by-token text generation and tool activity notifications."
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "PORT",
+			"value": "5000",
+			"type": "string"
+		}
+	]
+}

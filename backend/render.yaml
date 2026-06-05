@@ -1,0 +1,24 @@
+# Render Blueprint specification for the backend service.
+# If you are deploying this backend folder directly, Render will use this configuration.
+# If you are deploying from the root of the monorepo, use the render.yaml in the root folder.
+services:
+  - type: web
+    name: aradhana-backend
+    runtime: node
+    plan: starter
+    healthCheckPath: /health
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: NODE_ENV
+        value: production
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: MONGO_URI
+        sync: false
+      - key: PINECONE_API_KEY
+        sync: false
+      - key: PINECONE_INDEX_NAME
+        sync: false

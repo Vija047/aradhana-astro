@@ -153,7 +153,12 @@ export const chatController = {
           })}\n\n`);
         }
         // Accumulate intermediate state updates returned from nodes
-        else if (event.event === "on_node_end") {
+        else if (
+          (event.event === "on_node_end" || event.event === "on_chain_end") &&
+          event.metadata?.langgraph_node &&
+          event.metadata.langgraph_node !== "__start__" &&
+          event.metadata.langgraph_node !== "__end__"
+        ) {
           const output = event.data?.output;
           if (output) {
             if (output.messages) {

@@ -2,9 +2,11 @@
 
 Aradhana is a state-of-the-art AI-powered astrology and spiritual companion app. Using advanced LangGraph agent workflows, OpenAI models, vector embeddings, and real-time calculations, Aradhana calculates astronomical/astrological parameters, maps transit charts, and provides highly personalized cosmic guidance to users.
 
+**Live Demo**: [https://aradhana-astro.vercel.app/](https://aradhana-astro.vercel.app/)
+
 ---
 
-## 🏗️ Repository Architecture
+## Repository Architecture
 
 The project is structured as a monorepo consisting of:
 
@@ -13,15 +15,15 @@ The project is structured as a monorepo consisting of:
 
 ---
 
-## ✨ Features
+## Features
 
-### 🌌 Frontend UI (React + Vite)
+### Frontend UI (React + Vite)
 *   **Onboarding Flow**: Smooth, step-by-step interactive forms capturing birth date, time, and birthplace coordinates.
 *   **Celestial Chat**: A gorgeous message UI utilizing glassmorphic aesthetics, typing micro-animations, and styled astro insights.
 *   **Interactive Birth Chart**: Visual overlays mapping zodiac houses, planetary coordinates, and transits.
 *   **Astro Visuals**: Beautiful custom UI elements that feel premium and modern.
 
-### 🧠 Backend Agent (Node.js + LangGraph)
+### Backend Agent (Node.js + LangGraph)
 *   **Stateful Agent Workflow**: Uses `@langchain/langgraph` to guide user queries from reasoning to tool execution or router nodes.
 *   **Astro Tools**:
     *   `birthChart`: Calculates planetary positions based on birth coordinates and UTC offsets.
@@ -33,9 +35,9 @@ The project is structured as a monorepo consisting of:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### 📋 Prerequisites
+### Prerequisites
 Make sure you have the following installed on your system:
 *   [Node.js](https://nodejs.org/) (v18.x or higher recommended)
 *   [MongoDB](https://www.mongodb.com/) (Local server or MongoDB Atlas instance)
@@ -43,7 +45,7 @@ Make sure you have the following installed on your system:
 
 ---
 
-### ⚙️ Backend Setup
+### Backend Setup
 
 1.  Navigate to the backend directory:
     ```bash
@@ -84,7 +86,7 @@ Make sure you have the following installed on your system:
 
 ---
 
-### 💻 Frontend Setup
+### Frontend Setup
 
 1.  Navigate to the frontend directory:
     ```bash
@@ -102,7 +104,7 @@ Make sure you have the following installed on your system:
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 *   **Framework**: React (v19)
@@ -117,7 +119,7 @@ Make sure you have the following installed on your system:
 
 ---
 
-## 📊 Evaluation & Testing
+## Evaluation & Testing
 
 The backend includes a dedicated evaluation framework for verifying the LLM agent:
 *   **Run command**: `npm run eval` in `backend/`
